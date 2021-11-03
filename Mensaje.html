@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>MENSAJES</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funcionesMensajes.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body onload="getDataCabana();getDataCliente()">
+    <center>
+        <a href="Cabanas.html" title="CABAÑAS">Cabañas</a>&nbsp;&nbsp;&nbsp;
+        <a href="Categorias.html" title="CATEGORIAS">Categorias</a>&nbsp;&nbsp;&nbsp;
+        <a href="Clientes.html" title="CLIENTES">Clientes</a>&nbsp;&nbsp;&nbsp;
+        <a href="Mensaje.html" title="MENSAJES">Mensajes</a>&nbsp;&nbsp;&nbsp;
+        <a href="Reservas.html" title="RESERVAS">Reservas</a>&nbsp;&nbsp;&nbsp;
+        <a href="Calificacion.html" title="CALIFICACIONES">Calificaciones</a>&nbsp;&nbsp;&nbsp;
+        <a href="Usuarios.html" title="USUARIOS">Usuarios</a>
+        <hr>
+        <h2>GESTIÓN MENSAJES </h2>
+        <fieldset style="width: 30%">
+            <legend>Datos del Mensaje</legend>
+            <table>
+                <tr>
+                    <th>Cabaña:</th>
+                    <td>
+                        <select id="cabanaM" required>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Cliente:</th>
+                    <td>
+                        <select id="clienteM" required>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Mensaje:</th>
+                    <td><input type="text" id="mensajeM" maxlength="250" size="45"> </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="button" id="guardaMen" value="Guardar Mensaje" onclick="guardarMensaje()">
+                        <input type="button" id="actualizaMen" value="Actualizar Mensaje" onclick="editarMensaje() "
+                            disabled="true">
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <hr>
+        </fieldset>
+        <h2> CONSULTA DE MENSAJES</h2>
+        <fieldset style="width: 30%">
+            <legend>Consulta</legend>
+            <table>
+                <tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="button" value="Consultar Mensaje" onclick="consultarMensajeTodo()">
+                    </td>
+                </tr>
+                <tr>
+                    <table border="2" cellpadding="3" id="TablaResultadoMensajes">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </tr>
+                </tr>
+            </table>
+        </fieldset>
+    </center>
+</body>
+
+</html>
